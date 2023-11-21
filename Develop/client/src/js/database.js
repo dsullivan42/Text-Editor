@@ -20,7 +20,6 @@ const db = await openDB('jate', 1);
 const tx = db.transaction('jate', 'readwrite');
 const store = tx.objectStore('jate');
 await store.put(content);
-return tx.complete;
 }
 // TODO: Add logic for a method that gets all the content from the database
 export const getDb = async () => {
